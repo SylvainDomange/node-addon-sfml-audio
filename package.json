@@ -1,7 +1,7 @@
 {
   "name": "sfml-audio",
   "version": "1.0.0",
-  "description": "",
+  "description": "sfml-audio binding with an added mp3 decoder",
   "main": "js/lib.js",
   "private": true,
   "gypfile": true,
