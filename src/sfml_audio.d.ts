@@ -242,6 +242,8 @@ export interface SoundBuffer extends RefCounted {
      *
      * The supported audio formats are: WAV (PCM only), OGG/Vorbis, FLAC, MP2, MP3. The supported sample sizes for FLAC and WAV are 8, 16, 24 and 32 bit.
      *
+     * Throws an exception if loading failed.
+     *
      * @param path Path of the sound file to load
      */
     loadFromFile(path: string): void;
@@ -251,6 +253,8 @@ export interface SoundBuffer extends RefCounted {
      *
      * The supported audio formats are: WAV (PCM only), OGG/Vorbis, FLAC, MP2, MP3. The supported sample sizes for FLAC and WAV are 8, 16, 24 and 32 bit.
      *
+     * Throws an exception if loading failed.
+     *
      * @param data Sound file data
      */
     loadFromMemory(data: Uint8Array): void;
@@ -259,6 +263,8 @@ export interface SoundBuffer extends RefCounted {
      * Load the sound buffer from an array of audio samples.
      *
      * The assumed format of the audio samples is 16 bits signed integer.
+     *
+     * Throws an exception if loading failed.
      *
      * @param samples Array of samples
      * @param channelCount Number of channels (1 = mono, 2 = stereo, ...)
@@ -270,6 +276,8 @@ export interface SoundBuffer extends RefCounted {
      * Save the sound buffer to an audio file.
      *
      * The supported audio formats are: WAV, OGG/Vorbis, FLAC.
+     *
+     * Throws an exception if saving failed.
      *
      * @param path Path of the sound file to write
      */
@@ -436,6 +444,8 @@ export interface Music extends RefCounted, SoundStream {
      *
      * The supported audio formats are: WAV (PCM only), OGG/Vorbis, FLAC, MP2, MP3. The supported sample sizes for FLAC and WAV are 8, 16, 24 and 32 bit.
      *
+     * Throws an exception if loading failed.
+     *
      * @warning Since the music is not loaded at once but rather streamed continuously, the file must remain accessible until the
      * Music object loads a new music or is destroyed.
      *
@@ -449,6 +459,8 @@ export interface Music extends RefCounted, SoundStream {
      * This function doesn't start playing the music (call play() to do so).
      *
      * The supported audio formats are: WAV (PCM only), OGG/Vorbis, FLAC, MP2, MP3. The supported sample sizes for FLAC and WAV are 8, 16, 24 and 32 bit.
+     *
+     * Throws an exception if loading failed.
      *
      * @warning Since the music is not loaded at once but rather streamed continuously, the data buffer must remain accessible until the
      * Music object loads a new music or is destroyed. That is, you can't deallocate the buffer right after calling this function.
