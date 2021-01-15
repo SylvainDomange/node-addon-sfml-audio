@@ -15,4 +15,4 @@ Napi::Object build_module(Napi::Env env, Napi::Object exports) {
     return exports;
 }
 
-NODE_API_MODULE(NODE_GYP_MODULE_NAME, build_module)
+NODE_API_MODULE(SFML_AUDIO_NODE, build_module)
