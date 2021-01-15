@@ -1,6 +1,6 @@
 {
   "name": "sfml-audio-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "sfml-audio binding with an added mp3 decoder",
   "private": true,
   "scripts": {

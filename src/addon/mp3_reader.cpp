@@ -67,9 +67,7 @@ void mp3_reader::seek(sf::Uint64 sample_offset) {
 sf::Uint64 mp3_reader::read(sf::Int16* samples, sf::Uint64 max_count) {
     size_t done;
 
-	if (mpg123_read(handle_, buf_.get(), buf_size_, &done) != MPG123_OK)
-		return 0;
-
+	mpg123_read(handle_, buf_.get(), buf_size_, &done);
 	std::memcpy(samples, buf_.get(), done);
 
 	return done / sizeof(short);
